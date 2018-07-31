@@ -1,0 +1,64 @@
+<<!DOCTYPE html>
+<link rel="stylesheet" href="./styles/home.css">
+<link rel="stylesheet" href="./styles/cart.css">
+<html ng-app="holy">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+
+
+
+      <ui-view></ui-view>
+
+
+</head>
+<body class="home homeFont">
+  <div ng-controller="shoppingCtrl">
+          <h2>Products</h2>
+          <table ng-show="products.length > 0">
+              <tr ng-repeat="product in products">
+                  <td>
+                      {{product.name}}
+                  </td>
+                  <td>
+                      {{product.price}}
+                  </td>
+                  <td>
+                      <button ng-click="addCartItem(product)" ></button>
+                  </td>
+              </tr>
+          </table>
+
+          <h2>Shopping cart</h2>
+              <table ng-show="cartItems.length > 0">
+              <tr>
+                  <th>Name</th>
+                  <th>Price</th>
+                  <th>Quantity</th>
+              </tr>
+              <tr ng-repeat="item in cartItems">
+                  <td>
+                      {{item.name}}
+                  </td>
+                  <td>
+                      {{item.price}}
+                  </td>
+                  <td>
+                      {{item.quantity}}
+                  </td>
+              </tr>
+              <tr>
+                  <td>
+                      {{ cartSum() }}
+                  </td>
+              </tr>
+          </table>
+      </div>
+
+
+
+      <script src="./js/app.js"></script>
+<script src="./js/controllers/shoppingCtrl.js"></script>
+
+  </body>
+</html>
