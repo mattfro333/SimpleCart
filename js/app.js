@@ -8,7 +8,7 @@ angular.module('holly',['ui.router']).config(function($stateProvider, $urlRouter
             })
             .state('cart', {
               url: '/cart',
-              templateUrl: '../views/cart.html',
+              templateUrl: '../index.html',
               controller: 'shoppingCtrl'
             })
             .state('checkout', {

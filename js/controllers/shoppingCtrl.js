@@ -1,7 +1,8 @@
 angular.module('holly').controller('shoppingCtrl',function($scope){
+
     $scope.products = [];
     $scope.cartItems = [];
-
+console.log($scope);
     function initProducts(){
         $scope.products = [
             { name : 'CD', price : 110, id : 1 },
@@ -9,8 +10,8 @@ angular.module('holly').controller('shoppingCtrl',function($scope){
         ]
     }
 
+initProducts();
 
-    initProducts();
 
     $scope.addCartItem = function(product){
         $scope.cartItems.push({ name : product.name, quantity: 1, id : product.id, price : product.price })

@@ -1,7 +1,7 @@
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <link rel="stylesheet" href="./styles/home.css">
 <link rel="stylesheet" href="./styles/cart.css">
-<html ng-app="holy">
+<html ng-app="holly">
   <head>
     <meta charset="utf-8">
     <title></title>
@@ -14,10 +14,10 @@
 </head>
 <body class="home homeFont">
   <div ng-controller="shoppingCtrl">
-          <h2>Products</h2>
+          <h2>Products Line</h2>
           <table ng-show="products.length > 0">
-              <tr ng-repeat="product in products">
-                  <td>
+              <div ng-repeat="product in products">
+                  <div>
                       {{product.name}}
                   </td>
                   <td>
@@ -25,8 +25,8 @@
                   </td>
                   <td>
                       <button ng-click="addCartItem(product)" ></button>
-                  </td>
-              </tr>
+                  </div>
+              </div>
           </table>
 
           <h2>Shopping cart</h2>
