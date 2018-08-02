@@ -1,16 +1,15 @@
-angular.module('holly').controller('shoppingCtrl',function($scope){
+angular.module('holly').controller('shoppingCtrl',function($scope, shoppingSrvc){
 
     $scope.products = [];
     $scope.cartItems = [];
 console.log($scope);
-    function initProducts(){
-        $scope.products = [
-            { name : 'CD', price : 110, id : 1 },
-            { name : 'DVD', price : 150, id: 2 }
-        ]
-    }
 
-initProducts();
+
+$scope.initProducts = function ($scope){
+    shoppingSrvc.initProducts().then(function(response){
+        $scope.products = response.data
+
+}
 
 
     $scope.addCartItem = function(product){
