@@ -1,4 +1,4 @@
-angular.module('heroApp').service('battleSrvc', function($http){
+angular.module('holly').service('battleSrvc', function($http){
   this.initProducts(){
     return    $scope.products = [
           { name : 'CD', price : 110, id : 1 },
