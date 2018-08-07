@@ -1,11 +1,10 @@
-angular.module('holly').service('battleSrvc', function($http){
-  this.initProducts(){
-    return    $scope.products = [
-          { name : 'CD', price : 110, id : 1 },
-          { name : 'DVD', price : 150, id: 2 }
-      ].then(function(response){
-        console.log(response.data)
-      return response.data;
-    })
+angular.module('holly')
+.service('cartService', function($http) {
+  this.addToCart = function(product) {
+    console.log(`Adding ${product} to cart`);
+    return $http.post('/api/cart', product)
   }
-}
+  this.getCart = function(){
+    return $http.get('/api/cart')
+  }
+})
