@@ -4,7 +4,7 @@ angular.module('holly',['ui.router']).config(function($stateProvider, $urlRouter
             .state('cart', {
               url: '/cart',
               templateUrl: '../index.html',
-              controller: 'shoppingCtrl'
+              controller: 'mainCtrl'
             })
             $urlRouterProvider.otherwise('/')
       });

@@ -1,5 +1,4 @@
-angular.module('holly')
-.service('cartService', function($http) {
+angular.module('holly').service('cartService', function($http) {
   this.addToCart = function(product) {
     console.log(`Adding ${product} to cart`);
     return $http.post('/api/cart', product)

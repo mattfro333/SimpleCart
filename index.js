@@ -2,7 +2,7 @@ var express = require('express');
 var session = require('express-session');
 var bodyParser = require('body-parser');
 var config = require('./config');
-var cartCtrl = require('./cartCtrl');
+var cartCtrl = require('./js/controllers/mainCtrl');
 var app = express();
 app.use(express.static('public'));
 app.use('/node_modules', express.static('node_modules'));
