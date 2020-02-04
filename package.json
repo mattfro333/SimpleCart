@@ -10,7 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "angular": "^1.7.2",
+    "angular": "^1.7.9",
     "angular-animate": "^1.7.2",
     "angular-bootstrap": "^0.12.2",
     "angular-foundation": "^0.8.0",
@@ -19,7 +19,7 @@
     "body-parser": "^1.17.1",
     "express": "^4.15.2",
     "express-session": "^1.15.2",
-    "lodash": "^4.17.11",
+    "lodash": "^4.17.15",
     "massive": "^2.6.0",
     "passport": "^0.3.2",
     "passport-auth0": "^0.6.0",
